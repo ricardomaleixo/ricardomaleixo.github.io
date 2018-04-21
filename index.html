@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>json tree example</title>
+		<title>cv rma</title>
 		<link href="css/jsontree.css" rel="stylesheet">
 		<script src="src/jsontree.js"></script>
   	</head>
@@ -13,25 +13,30 @@
       me: {
         name: 'Ricardo Martins Aleixo',
         age: '24',
-        urls: [
+        noun: 'Brasil, Maringá',
+        now: 'Portugal, Lisboa',
+        contact: [
           {
+            email: 'ricardoaleixoo@gmail.com',
             github: 'https://github.com/ricardomaleixo',
             linkedin: 'https://www.linkedin.com/in/ricardomaleixo/'
           }
         ]
       },
-      bar: [
-        {foo: 'barfoo'},
-        {qux: 'barqux'}
+      enterprise: [
+        { name: "Cwork Sistemas", from: "June 2012", to: "November 2012", title: "C# desktop developer", description: { e: " C #, ASP.NET, WebForms, MVC, WCF, nHibernate, jQuery, Selenium tests, Oracle focused on sustainable.", x: "Development, code quality, implementation of project standards."}},
+        { name: "Publisoft Informática Ltda", from: "January 2013", to: "May 2014", title: "C# developer", description: { e: " Identifying improvements in business rules and technical solutions.", x: "Software Development using C#, MVC 4, Entity Framework, Razor, Asp, Aspx, Webforms, Vb6, Pascal, Delphi, HTML, JQuery, KnockoutJS, JavaScript, JSON, CSS, WCF, SOA, Oracle, Selenium tests."}},
+        { name: "DB1 Global Software", from: "November 2014", to: "March 2017", title: "C# and AngularJs Developer ", description: { e: " Participating in defining technical solutions.", x: "Identifying improvements in business rules and technical solutions.", p: " Identifying what is important and adds value to the customer.", er: "Software Development using C#, MVC 4, Entity Framework, WebAPI, HTML, JQuery, AngularJS, JavaScript, JSON, CSS, SQL Server 2012, xUnit (tests).", i: "Performing code reviews ensuring the quality of the code.", i: "Code quality Sonar"}}
       ],
-      qux: [
+      projects: [
         'foo',
         'bar',
         'foobar'
       ],
-      baz: true,
-      foobar: [0, 1, 2, 3],
-      barfoo: null
+      education: [
+        
+      ],
+      skills: []
     });
 	document.getElementById("example").innerHTML = result;
 	</script>
