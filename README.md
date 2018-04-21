@@ -1,2 +1,0 @@
-# ricardomaleixo.github.io
-
