@@ -1,6 +1,6 @@
 .jstValue {
     white-space: pre-wrap;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
     font-family: "Lucida Console", Monaco, monospace;
 }
@@ -42,4 +42,7 @@
 }
 .jstHiddenBlock {
     display: none;
+}
+.wordWrap {
+    white-space: pre
 }
