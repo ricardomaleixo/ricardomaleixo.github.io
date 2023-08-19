@@ -1,88 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>My Landing Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>My Landing Page</title>
+  <style>
+    body, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+      background-color: #333;
+      color: #fff;
+      width: 20%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar nav ul li {
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .sidebar nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .content {
+      margin-left: 20%;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .sidebar nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
 </head>
 <body>
-    <aside class="sidebar">
-        <nav>
-            <ul>
-                <li><a href="#home">./</a></li>
-                <li><a href="#about">./About</a></li>
-                <li><a href="#lab">./Lab</a></li>
-                <li><a href="#career">./Career</a></li>
-                <li><a href="#contact">./Contact</a></li>
-            </ul>
-        </nav>
-    </aside>
-    <main class="content">
-      <section id="home">
-          <h1>welcome to my website</h1>
-      </section>
-      <section id="about">
-          <h1>About</h1>
-          <p>I'm Ricardo M. Aleixo, 29yrs.</p>
-      </section>
-      <section id="lab">
-          <h1>Lab</h1>
-          <p>Here i'll list my projects.</p>
-      </section>
-      <section id="career">
-          <h1>Career</h1>
-          
+  <aside class="sidebar">
+      <nav>
           <ul>
-            <li>
-              <h3>Angular Developer at Accountfy</h3>
-              <h4>Nov 2019 - Present · 3 yrs 10 mos</h4>
-              <h5>Maringá Area, Brazil</h5>
-              <ul>
-                <li>                   
-                </li>
-                
-              </ul>
-            </li>
-            <li>
-              <h3>Java and Angular Developer at CGI</h3>
-              <h4>Feb 2019 - Nov 2019 · 10 mos</h4>
-              <h5>Lisbon Area, Portugal</h5>
-              <ul>
-                <li>
-
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>C# and Angular Developer at Match Profiler</h3>
-              <h4>Dec 2017 - Feb 2019 · 1 yr 3 mos</h4>
-              <h5>Lisbon Area, Portugal</h5>
-              <ul>
-                <li>
-                  
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>C# and AngularJs Developer at DB1 Global Software</h3>
-              <h4>Nov 2014 - Mar 2017 · 2 yrs 5 mos</h4>
-              <h5>Maringá e Região, Brasil</h5>
-              <ul>
-                <li>
-
-                </li>
-              </ul>
-            </li>
-
+              <li><a href="#home">./</a></li>
+              <li><a href="#about">./About</a></li>
+              <li><a href="#lab">./Lab</a></li>
+              <li><a href="#career">./Career</a></li>
+              <li><a href="#contact">./Contact</a></li>
           </ul>
-      </section>
-      <section id="contact">
-          <h1>Contact</h1>
-          <p>ricardoaleixoo@gmail.com</p>
-          <a href="https://www.linkedin.com/in/ricardomaleixo/"> linkedin</a>
-          <a href="https://github.com/ricardomaleixo"> github </a>
-      </section>
+      </nav>
+  </aside>
+  <main class="content">
+    <section id="home">
+        <h1>welcome to my website</h1>
+    </section>
+    <section id="about">
+        <h1>About</h1>
+        <p>I'm Ricardo M. Aleixo, 29yrs.</p>
+    </section>
+    <section id="lab">
+        <h1>Lab</h1>
+        <p>Here i'll list my projects.</p>
+    </section>
+    <section id="career">
+        <h1>Career</h1>
+        
+        <ul>
+          <li>
+            <h3>Angular Developer at Accountfy</h3>
+            <h4>Nov 2019 - Present · 3 yrs 10 mos</h4>
+            <h5>Maringá Area, Brazil</h5>
+            <ul>
+              <li>                   
+              </li>
+              
+            </ul>
+          </li>
+          <li>
+            <h3>Java and Angular Developer at CGI</h3>
+            <h4>Feb 2019 - Nov 2019 · 10 mos</h4>
+            <h5>Lisbon Area, Portugal</h5>
+            <ul>
+              <li>
+
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h3>C# and Angular Developer at Match Profiler</h3>
+            <h4>Dec 2017 - Feb 2019 · 1 yr 3 mos</h4>
+            <h5>Lisbon Area, Portugal</h5>
+            <ul>
+              <li>
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h3>C# and AngularJs Developer at DB1 Global Software</h3>
+            <h4>Nov 2014 - Mar 2017 · 2 yrs 5 mos</h4>
+            <h5>Maringá e Região, Brasil</h5>
+            <ul>
+              <li>
+
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+    </section>
+    <section id="contact">
+        <h1>Contact</h1>
+        <p>ricardoaleixoo@gmail.com</p>
+        <a href="https://www.linkedin.com/in/ricardomaleixo/"> linkedin</a>
+        <a href="https://github.com/ricardomaleixo"> github </a>
+    </section>
   </main>
   <script>
     debugger
@@ -111,5 +170,4 @@
     document.getElementById('home').style.display = 'block'; 
   </script>
 </body>
-
 </html>
