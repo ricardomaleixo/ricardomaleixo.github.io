@@ -1,0 +1,101 @@
+---
+import { LinkedinIcon, GithubIcon, CodepenIcon, DribbbleIcon, InstagramIcon, TwitterIcon } from 'astro-feather';
+
+const socialMedia = [
+  {
+    link: 'https://www.linkedin.com/in/ricardomaleixo/',
+    icon: 'LinkedinIcon',
+    name: 'Linkedin',
+  },
+  {
+    link: 'https://github.com/ricardomaleixo',
+    icon: 'GithubIcon',
+    name: 'Github',
+  },
+  {
+    link: 'https://instagram.com/ricardoaleixoo',
+    icon: 'InstagramIcon',
+    name: 'Instagram',
+  },
+  {
+    link: 'https://twitter.com/ea_ricardo',
+    icon: 'TwitterIcon',
+    name: 'Twitter',
+  },
+] as const;
+
+const iconMap = {
+  LinkedinIcon,
+  GithubIcon,
+  CodepenIcon,
+  DribbbleIcon,
+  InstagramIcon,
+  TwitterIcon,
+} as const;
+---
+
+<div class="flex flex-col items-center gap-4 rounded-xl">
+  <div class="flip-card w-32 min-w-32 h-32">
+    <div class="flip-card-inner relative w-full h-full">
+      <div class="flip-card-front absolute w-full h-full">
+        <div class="w-32 h-32 min-w-32 bg-zinc-800 rounded-full mx-auto border border-zinc-600 overflow-hidden shadow">
+          <img src="/me.webp" class="w-32 h-32 min-w-32 object-cover object-center grayscale" alt="" />
+        </div>
+      </div>
+
+      <div class="flip-card-back absolute w-full h-full">
+        <div class="w-32 h-32 min-w-32 bg-zinc-800 rounded-full mx-auto border border-zinc-600 overflow-hidden shadow">
+          <img src="/me.webp" class="w-32 h-32 min-w-32 object-cover object-center" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full text-center">
+    <span class="block font-medium text-2xl text-zinc-200">Ricardo Aleixo</span>
+    <span class="block text-xs text-zinc-500">Software Engineer</span>
+  </div>
+  <div class="w-full max-w-xl text-center">
+    <span class="block font-normal text-sm text-zinc-300">Working as a Software developer since 2014. I started with backend (C#) migrate to Full Stack (C#/ Java/ Angular) and nowadays only frontend (Angular) aiming Full Stack Web developer. (Node, TypeScript)
+
+      problem solver.</span>
+  </div>
+
+  <div class="flex flex-wrap justify-center items-center gap-2 pt-4">
+    {
+      socialMedia.map(({ link, icon, name }) => {
+        const IconComponent = iconMap[icon];
+        return (
+          <a href={link} target="_blank" title={name} class="bg-zinc-900 shadow border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 text-zinc-300 hover:text-zinc-50 rounded-xl h-10 w-10 min-w-10 text-sm flex items-center justify-center gap-2">
+            <IconComponent size={20} strokeWidth={1} />
+          </a>
+        );
+      })
+    }
+  </div>
+</div>
+
+<style>
+  .flip-card {
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+</style>

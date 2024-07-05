@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.astro';
+import Hero from '../components/Hero.astro';
+import Skills from '../components/Skills.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+
+const skills = ['TypeScript', 'JavaScript', 'HTML', 'CSS', 'Angular', 'AngularJS', 'SASS', 'WYSIWYG', 'Document Editor', 'OnlyOffice', 'SpreadJS', 'AM Charts', 'Rich Text Editing', 'Chat GPT', 'Replicate', 'AI', 'Deploy', 'Github', 'Bitbucket', 'Jira', 'SCRUM'];
+
+const career = [
+  {
+    date: 'Nov 2019 - Present · Present',
+    title: 'Software Engineer',
+    company: 'Accountfy',
+    link: 'https://accountfy.com/',
+    description: ['Responsible for the reports/explanatory notes module'],
+  },
+  {
+    date: 'CGI Feb 2019 - Nov 2019 · 10 mos',
+    title: 'Java and Angular Developer',
+    company: 'CGI',
+    link: 'https://www.cgi.com/en',
+    description: ['Nearshore application development.', 'The HIJAT2 product is a payroll and HR application, used in Finland, which allows the user to manage holidays, contracts, vacancies, salary calculations and overall user management, Postgresql, TypeScript, Angular 7, HTML5, CSS3, Java 8, Spring, Angular Material, Jenkins'],
+  },
+  {
+    date: 'Nov 2014 - Mar 2017 · 2 yrs 5 mos',
+    title: 'C# and AngularJs Developer ',
+    company: 'DB1 Global Software',
+    link: 'https://www.db1.com.br/',
+    description: ['Participating in defining technical solutions.', ' Identifying improvements in business rules and technical solutions.', 'Identifying what is important and adds value to the customer.', 'Software Development using .NET C#, MVC 4, Entity Framework 5, WebAPI, JQuery, AngularJS, SQL Server 2012, xUnit, Octopus deploy', 'HTML, CSS, JavaScript', 'Sonar'],
+  },
+];
+
+const projects = [
+  {
+    name: 'Bichinhos',
+    link: 'https://bichinhos.app/',
+    title: 'Front-End · UI/UX Design',
+    description: 'O jeito mais fofinho de adotar seu bichinho. Encontre bichinhos para adoção, ajude a encontrar bichinhos desaparecidos e mantenha seus bichinhos seguro.',
+  }
+];
+
+---
+
+<Layout>
+  <Menu />
+
+  <div class="p-4 w-full flex flex-col max-w-4xl mx-auto">
+    <Hero />
+    <Skills items={skills} />
+    <Experience items={career} />
+    <Projects items={projects} />
+    <Contact />
+  </div>
+
+  <Footer />
+</Layout>

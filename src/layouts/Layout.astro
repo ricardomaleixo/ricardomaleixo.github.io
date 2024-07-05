@@ -1,0 +1,96 @@
+---
+import '@fontsource/geist-mono';
+const title = 'Ricardo Aleixo';
+const subtitle = 'Software Engineer';
+const description = 'Working as a Software developer since 2014. I started with backend (C#) migrate to Full Stack (C#/ Java/ Angular) and nowadays only frontend (Angular) aiming Full Stack Web developer. (Node, TypeScript). problem solver.';
+const url = 'https://ricardomaleixo.github.io/';
+const image = '';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function (w, d, s, l, i) {
+        console.log('GTM');
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PFVLN9XH');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} - {subtitle}</title>
+    <meta name="title" content=`${title} - ${subtitle}` />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#09090b" />
+    <meta name="color-scheme" content="dark" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content=`${title} - ${subtitle}` />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:alt" content=`${title} - ${subtitle}` />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={url} />
+    <meta property="fb:app_id" content="" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={url} />
+    <meta property="twitter:title" content=`${title} - ${subtitle}` />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+  </head>
+  <body class="w-full content bg-slate-800 mb-14 md:mb-0">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFVLN9XH" height="0" width="0" style="display:none;visibility:hidden"> </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="p-2 md:p-4 lg:p-10 flex flex-col gap-4 md:gap-10 relative mb-20 md:mb-0" id="about-me">
+      <slot />
+    </div>
+    <div class="bg-zinc-900/50 border-t border-zinc-800 px-8 w-full text-center min-h-16 flex justify-center items-center">
+      <div class="text-zinc-500 text-xs">Developed by <a href="https://github.com/ricardomaleixo" target="_blank" class="text-zinc-300 hover:text-zinc-50 hover:underline underline-offset-1">Ricardo Aleixo</a>, <a href="https://github.com/ricardomaleixo/fork" target="_blank" class="text-zinc-300 hover:text-zinc-50 hover:underline underline-offset-1">Click here</a> to fork!</div>
+    </div>
+  </body>
+</html>
+<style is:global>
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Geist Mono', monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  html {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  #menu ::-webkit-scrollbar {
+    @apply w-0 h-0 rounded-xl;
+  }
+</style>
+
+<script></script>
